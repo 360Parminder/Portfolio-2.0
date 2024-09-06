@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import LeftNav from './Components/Header/LeftNav';
+import RightNav from './Components/Header/RightNav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='topographyBg flex flex-row justify-between h-screen w-screen'>
+    {/* <h1 className=' container text-[var(--font-color)] text-center text-5xl font-bold'>
+      hello world!
+    </h1> */}
+    <LeftNav />
+    <RightNav />
     </div>
+    </>
   );
 }
 
