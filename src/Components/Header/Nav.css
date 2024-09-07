@@ -1,0 +1,12 @@
+.mail{
+    writing-mode: vertical-rl;
+}
+.logo{
+    
+    font-size: 2rem;
+}
+.logo:hover{
+    color: var(--hover-color);
+    cursor: pointer;    
+    transform: translateY(-0.2rem);
+}

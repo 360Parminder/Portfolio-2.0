@@ -11,7 +11,7 @@
   --font-color-dark: #000000;
   --border-color: #ffffff;
   --border-color-dark: #000000;
-  --hover-color: #ffffff;
+  --hover-color: #ffe1a8;
   --hover-color-dark: #000000;
   --hover-border-color: #ffffff;
   --hover-border-color-dark: #000000;
@@ -33,8 +33,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
-  background-color: var(--background-color);
-  
 }
 
 
