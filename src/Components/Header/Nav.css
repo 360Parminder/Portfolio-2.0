@@ -5,6 +5,17 @@
     
     font-size: 2rem;
 }
+@keyframes logo {
+    from{
+        opacity: 0;
+        scale: 0.8;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
 .logo:hover{
     color: var(--hover-color);
     cursor: pointer;    
