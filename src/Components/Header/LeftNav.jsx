@@ -2,7 +2,7 @@ import React from 'react'
 import { IonIcon } from '@ionic/react';
 import { logoCodepen, logoGithub, logoInstagram, logoLinkedin, logoX } from 'ionicons/icons';
 import './Nav.css'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 const LeftNav = () => {
   return (
 

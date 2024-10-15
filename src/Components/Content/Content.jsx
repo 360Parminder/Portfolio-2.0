@@ -1,12 +1,13 @@
 import React from 'react'
 import './Content.css'
-import Page1 from './ContentPages/Page1'
+import Page from '../../Pages/Page'
+import Projects from '../../Pages/Projects'
 const Content = () => {
     return (
 
-        <div className='flex flex-col'>
-            <Page1 />
-            <Page1 />
+        <div className='flex flex-col h-full'>
+            <Page />
+            <Projects />
         </div>
 
     )
