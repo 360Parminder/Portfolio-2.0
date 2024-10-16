@@ -2,12 +2,14 @@ import React from 'react'
 import './Content.css'
 import Page from '../../Pages/Page'
 import Projects from '../../Pages/Projects'
+import About from '../../Pages/About'
 const Content = () => {
     return (
 
         <div className='flex flex-col h-full'>
             <Page />
             <Projects />
+            <About />
         </div>
 
     )

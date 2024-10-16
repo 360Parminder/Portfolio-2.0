@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import logo from '../../Assets/Images/whitelogo.png'
 
 const Header = () => {
     const [currentTime, setCurrentTime] = useState("");
@@ -21,11 +21,11 @@ const Header = () => {
   return (
     <div className='flex justify-between items-center w-full h-16 bg-[#0000008d] text-white px-5'>
       <div className='flex items-center'>
-        <img src='https://i.ibb.co/4j3m5kH/logo.png' alt='logo' className='w-10 h-10' />
+        <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
       <div>
         <p>Rajasthan,India</p>
-        <p>-{currentTime}</p>
+        <p>{currentTime}</p>
       </div>
       <div className='flex items-center'>
         <div className='mr-5 text-xl'>
