@@ -24,7 +24,7 @@ const Projects = () => {
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-                <div id="slide3" className="carousel-item relative w-full">
+                {/* <div id="slide3" className="carousel-item relative w-full">
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
                         className="w-full" alt='cover'  />
@@ -41,7 +41,7 @@ const Projects = () => {
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </div>

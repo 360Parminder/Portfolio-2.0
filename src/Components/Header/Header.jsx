@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from '../../Assets/Images/whitelogo.png'
+import {motion} from 'framer-motion'
 
 const Header = () => {
     const [currentTime, setCurrentTime] = useState("");
@@ -19,7 +20,18 @@ const Header = () => {
       }, []);
     console.log(currentTime);
   return (
-    <div className='flex sticky z-30 top-0 justify-between items-center w-full h-16 text-white px-5'>
+    <motion.div
+    initial={{ y: -100, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: 0.5,
+                duration: 1.5
+              }
+            }}
+
+    className='flex sticky z-30 top-0 justify-between items-center w-full h-16 text-white px-5'>
       <div className='flex items-center'>
         <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
@@ -39,7 +51,7 @@ const Header = () => {
         </div>
       </div>
       <a href="mailto:360.parminder@gmail.com" target="_blank" className='flex items-center'>LET'S TALK</a>
-    </div>
+    </motion.div>
   )
 }
 
