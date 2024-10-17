@@ -1,4 +1,6 @@
 import cover from '../Assets/Images/Cover.png'
+import Project1 from '../Assets/Images/auraVideos.png'
+import Project2 from '../Assets/Images/theslug.png'
 const Projects = () => {
     return (
         <div className="w-full  h-screen flex flex-col mt-5 justify-center items-center bg-cover" style={{ backgroundImage: `url(${cover})` }}>
@@ -6,7 +8,7 @@ const Projects = () => {
 
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                        src={Project1}
                         className="w-full" alt='cover' />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide4" className="btn btn-circle">❮</a>
@@ -15,7 +17,7 @@ const Projects = () => {
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                        src={Project2}
                         className="w-full" alt='cover' />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide1" className="btn btn-circle">❮</a>

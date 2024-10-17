@@ -19,7 +19,7 @@ const Header = () => {
       }, []);
     console.log(currentTime);
   return (
-    <div className='flex sticky top-0 justify-between items-center w-full h-16 text-white px-5'>
+    <div className='flex sticky z-30 top-0 justify-between items-center w-full h-16 text-white px-5'>
       <div className='flex items-center'>
         <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
