@@ -8,8 +8,8 @@ import RightNav from './Components/Header/RightNav';
 function App() {
   return (
 
-    <div className='topographyBg flex flex-col items-center'>
-      <Header/>
+    <div className='topographyBg flex flex-col justify-center items-center'>
+    <Header/>
     <LeftNav />
     <RightNav />
     <Content/>

@@ -15,7 +15,7 @@ const About =()=>{
             <div>
 
             </div>
-            <div className="w-full flex flex-row justify-evenly">
+            <div className="w-full flex flex-row items-end justify-evenly">
                 <div className="flex flex-col items-center">
 
                     <p className=" text-[6rem]">+25</p>

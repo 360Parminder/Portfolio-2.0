@@ -19,7 +19,7 @@ const Header = () => {
       }, []);
     console.log(currentTime);
   return (
-    <div className='flex justify-between items-center w-full h-16 bg-[#0000008d] text-white px-5'>
+    <div className='flex sticky top-0 justify-between items-center w-full h-16 text-white px-5'>
       <div className='flex items-center'>
         <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
@@ -38,8 +38,7 @@ const Header = () => {
           <i className='fas fa-sign-out-alt'>Resume</i>
         </div>
       </div>
-        <button>LET'S TALK</button>
-      
+      <a href="mailto:360.parminder@gmail.com" target="_blank" className='flex items-center'>LET'S TALK</a>
     </div>
   )
 }
