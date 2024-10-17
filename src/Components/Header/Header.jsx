@@ -35,7 +35,7 @@ const Header = () => {
           <i className='fas fa-cog'>Work</i>
         </div>
         <div className='mr-5 text-xl'>
-          <i className='fas fa-sign-out-alt'>Resume</i>
+          <i className='fas fa-sign-out-alt'><a href="https://drive.google.com/file/d/1BHrmmm2oPBliaPQdxFpi3YKWC48CNV4v/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a></i>
         </div>
       </div>
       <a href="mailto:360.parminder@gmail.com" target="_blank" className='flex items-center'>LET'S TALK</a>
