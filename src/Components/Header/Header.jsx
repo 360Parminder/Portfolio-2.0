@@ -31,7 +31,7 @@ const Header = () => {
               }
             }}
 
-    className='flex sticky z-30 top-0 justify-between items-center w-full h-16 text-white px-5'>
+    className='flex sticky z-30 top-0 justify-between items-center w-full h-16 text-white px-5 bg-blend-saturation bg-opacity-50 bg-black'>
       <div className='flex items-center'>
         <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
@@ -50,7 +50,7 @@ const Header = () => {
           <i className='fas fa-sign-out-alt'><a href="https://drive.google.com/file/d/1BHrmmm2oPBliaPQdxFpi3YKWC48CNV4v/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a></i>
         </div>
       </div>
-      <a href="mailto:360.parminder@gmail.com" target="_blank" className='flex items-center'>LET'S TALK</a>
+      <a href="mailto:360.parminder@gmail.com" target="_blank" rel="noreferrer" className='flex items-center'>LET'S TALK</a>
     </motion.div>
   )
 }

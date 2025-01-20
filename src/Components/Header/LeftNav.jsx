@@ -30,7 +30,7 @@ const LeftNav = () => {
 
 
             className='text-[var(--font-color)] text-center text-2xl font-bold'>
-            <a href='https://www.linkedin.com/in/parminder-singh-storm/' target='_blank' className='cursor-pointer'> <IonIcon className='logo' icon={logoLinkedin} /></a>
+            <a href='https://www.linkedin.com/in/parminder-singh-storm/' target='_blank' rel="noreferrer" className='cursor-pointer'> <IonIcon className='logo' icon={logoLinkedin} /></a>
           </motion.li>
           <motion.li
             initial={{ y: 100, opacity: 0 }}
@@ -43,7 +43,7 @@ const LeftNav = () => {
               }
             }}
             className='text-[var(--font-color)] text-center text-2xl font-bold'>
-            <a href="https://www.instagram.com/360_parminder/" target='_blank' className='cursor-pointer'><IonIcon className='logo' icon={logoInstagram} /></a>
+            <a href="https://www.instagram.com/360_parminder/" target='_blank' rel="noreferrer" className='cursor-pointer'><IonIcon className='logo' icon={logoInstagram} /></a>
           </motion.li>
           <motion.li
 
@@ -57,7 +57,7 @@ const LeftNav = () => {
               }
             }}
             className='text-[var(--font-color)] text-center text-2xl font-bold'>
-            <a href="https://github.com/360Parminder" target='_blank' className='cursor-pointer'><IonIcon className='logo' icon={logoGithub} /></a>
+            <a href="https://github.com/360Parminder" target='_blank' rel="noreferrer" className='cursor-pointer'><IonIcon className='logo' icon={logoGithub} /></a>
           </motion.li>
           <motion.li
             initial={{ y: 100, opacity: 0 }}
@@ -70,7 +70,7 @@ const LeftNav = () => {
               }
             }}
             className='text-[var(--font-color)] text-center text-2xl font-bold'>
-            <a href="https://x.com/360parminder" target='_blank' className=' cursor-pointer'><IonIcon className='logo' icon={logoX} /></a>
+            <a href="https://x.com/360parminder" target='_blank' rel="noreferrer" className=' cursor-pointer'><IonIcon className='logo' icon={logoX} /></a>
           </motion.li>
           <motion.li
             initial={{ y: 100, opacity: 0 }}
@@ -83,7 +83,7 @@ const LeftNav = () => {
               }
             }}
             className='text-[var(--font-color)] text-center text-2xl font-bold'>
-            <a href="https://codepen.io/STORM992002" target='_blank' className=' cursor-pointer'><IonIcon className='logo' icon={logoCodepen} /></a>
+            <a href="https://codepen.io/STORM992002" target='_blank' rel="noreferrer" className=' cursor-pointer'><IonIcon className='logo' icon={logoCodepen} /></a>
           </motion.li>
         </motion.ul>
       </div>
