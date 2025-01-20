@@ -5,7 +5,7 @@ import { IonIcon } from '@ionic/react';
 import { information, logoGithub, paperPlaneOutline } from 'ionicons/icons';
 const Projects = () => {
     return (
-        <div className="w-full  h-screen flex flex-col mt-5 justify-center items-center bg-cover" >
+        <div className="w-full  h-screen flex flex-col mt-5 justify-center items-center bg-cover bg-blend-saturation bg-opacity-50 bg-black" >
             <div className='w-5/6 h-4/5 carousel rounded-lg'>
 
                 <div id="slide1" className="carousel-item relative w-full">
