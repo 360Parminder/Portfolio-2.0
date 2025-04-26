@@ -1,0 +1,20 @@
+.logo {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #646cff;
+  transform: translateY(-2px);
+}
+
+.mail {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transition: all 0.3s ease;
+}
+
+.mail:hover {
+  color: #646cff;
+  letter-spacing: 2px;
+}
