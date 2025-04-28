@@ -3,25 +3,32 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A modern web application built with React and Node.js",
+    title: "Rajdoot",
+    description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-    tech: ["React", "Node.js", "MongoDB"],
-    link: "#"
+    tech: ["React", "Node.js", "MongoDB","IOT","Razorpay"],
+    link: "https://rajdoot.parminder.info"
   },
   {
-    title: "Project 2",
+    title: "Aura",
     description: "Mobile-first responsive design with modern animations",
     image: "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
-    tech: ["React Native", "Firebase"],
-    link: "#"
+    tech: ["React", "Firebase", "Tailwind","Express","Node.js","MongoDB","Razorpay"],
+    link: "https://auravideos.vercel.app"
   },
   {
-    title: "Project 3",
-    description: "E-commerce platform with real-time updates",
+    title: "The Slug ",
+    description: "URl Shortener with a twist. Shorten your URLs and share them with the world. The Slug is a URL shortener that allows you to create short links for your long URLs.",
     image: "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
-    tech: ["Next.js", "Stripe", "Tailwind"],
-    link: "#"
+    tech: ["React", "Node.js", "Tailwind","MongoDB","Express",],
+    link: "slug-url.vercel.app"
+  },
+  {
+    title: "Quick Cart",
+    description: "Bill your customers in seconds. Quick Cart is a simple and easy to use cart application that allows you to create and manage your cart.",
+    image: "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+    tech: ["React", "Node.js", "Tailwind","MongoDB","Express","Razorpay"],
+    link: "https://quickcart-store.vercel.app"
   }
 ];
 
