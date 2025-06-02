@@ -1,16 +1,16 @@
 import React from 'react';
 import { IonIcon } from '@ionic/react';
-import { logoCodepen, logoGithub, logoInstagram, logoLinkedin, logoX } from 'ionicons/icons';
+import { logoCodepen, logoGithub, logoInstagram, logoLinkedin, logoMedium, logoX } from 'ionicons/icons';
 import './Nav.css';
 import { motion } from 'framer-motion';
 
 const LeftNav = () => {
   const socialLinks = [
-    { icon: logoLinkedin, url: 'https://www.linkedin.com/in/parminder-singh-storm/', delay: 0.5 },
+    { icon: logoLinkedin, url: 'https://www.linkedin.com/in/360parminder/', delay: 0.5 },
     { icon: logoInstagram, url: 'https://www.instagram.com/360_parminder/', delay: 1 },
     { icon: logoGithub, url: 'https://github.com/360Parminder', delay: 1.5 },
     { icon: logoX, url: 'https://x.com/360parminder', delay: 2 },
-    { icon: logoCodepen, url: 'https://codepen.io/STORM992002', delay: 2.5 }
+    { icon: logoMedium, url: 'https://medium.com/@360Parminder', delay: 2.5 }
   ];
 
   return (

@@ -73,7 +73,7 @@ const Header = () => {
         </motion.div>
 
         <motion.a
-          href="https://drive.google.com/file/d/1BHrmmm2oPBliaPQdxFpi3YKWC48CNV4v/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1gNsL_IEcKCswSxUuQB8AGSy2pY38gyew/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
