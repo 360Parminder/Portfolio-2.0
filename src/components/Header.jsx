@@ -52,7 +52,7 @@ const Header = () => {
       </motion.div>
 
       <div className="flex items-center space-x-8">
-        <motion.div
+        {/* <motion.div
           whileHover={{ scale: 1.1 }}
           className="group cursor-pointer"
         >
@@ -60,9 +60,9 @@ const Header = () => {
             About
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
           </span>
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           whileHover={{ scale: 1.1 }}
           className="group cursor-pointer"
         >
@@ -70,7 +70,7 @@ const Header = () => {
             Work
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
           </span>
-        </motion.div>
+        </motion.div> */}
 
         <motion.a
           href="https://drive.google.com/file/d/1gNsL_IEcKCswSxUuQB8AGSy2pY38gyew/view?usp=sharing"
