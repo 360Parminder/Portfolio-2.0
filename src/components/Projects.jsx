@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import rajdoot from '../assets/images/rajdoot.png';
-import aura from '../assets/images/aura.png';
-import slug from '../assets/images/slug.png';
-import swasthya from '../assets/images/swasthya.png';
+import rajdoot from '../assets/images/Rajdoot.png';
+import aura from '../assets/images/Aura.png';
+import slug from '../assets/images/Slug.png';
+import swasthya from '../assets/images/Swasthya.png';
 
 const projects = [
   {
