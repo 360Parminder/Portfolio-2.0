@@ -2,8 +2,54 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, callOutline, locationOutline } from 'ionicons/icons';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Get form values
+    const form = e.target;
+    const name = form.querySelector('input[type="text"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+    const message = form.querySelector('textarea').value;
+
+    // Validate form fields
+    if (!name || !email || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // You need to install emailjs-com: npm install emailjs-com
+
+    // Replace with your actual EmailJS credentials
+    const serviceID = 'service_9o89hgj';
+    const templateID = 'template_fa0n6x8';
+    const userID = 'cnWQny2C-HFTbtRfj';
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message
+    };
+
+    // Send the email
+    emailjs.send(serviceID, templateID, templateParams, userID)
+      .then(() => {
+        // Clear the form
+        alert('Message sent successfully!');
+        form.reset();
+      })
+      .catch(error => {
+        console.error('Email sending failed:', error);
+        alert('Failed to send message. Please try again later.');
+      });
+    
+  };
+  const handleInputChange = (e) => {
+    // Handle input change logic here if needed
+    console.log(e.target.value);
+  };
   return (
     <section id="contact" className="py-20 bg-black/95">
       <div className="container mx-auto px-4">
@@ -60,6 +106,8 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
+            onSubmit={handleSubmit}
+            onChange={handleInputChange}
           >
             <div>
               <input

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { IonIcon } from '@ionic/react';
-import { logoGithub, logoLinkedin, logoInstagram, logoX, logoCodepen } from 'ionicons/icons';
+import { logoGithub, logoLinkedin, logoInstagram, logoX, logoCodepen, logoMedium } from 'ionicons/icons';
 
 const Footer = () => {
   const socialLinks = [
@@ -9,7 +9,7 @@ const Footer = () => {
     { icon: logoInstagram, url: 'https://www.instagram.com/360_parminder/' },
     { icon: logoGithub, url: 'https://github.com/360Parminder' },
     { icon: logoX, url: 'https://x.com/360parminder' },
-    { icon: logoCodepen, url: 'https://codepen.io/STORM992002' }
+    { icon: logoMedium, url: 'https://medium.com/@360parminder' }
   ];
 
   return (
