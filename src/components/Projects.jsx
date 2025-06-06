@@ -29,24 +29,15 @@ const projects = [
     tech: ["React", "Firebase", "Tailwind","Express","Node.js","MongoDB","Razorpay"],
     link: "https://auravideos.vercel.app",
     github: "https://github.com/360Parminder/Aura-Frontend"
-
   },
   {
     title: "The Slug ",
     description: "URl Shortener with a twist. Shorten your URLs and share them with the world. The Slug is a URL shortener that allows you to create short links for your long URLs.",
     image: slug,
-    tech: ["React", "Node.js", "Tailwind","MongoDB","Express",],
+    tech: ["React", "Node.js", "Tailwind","MongoDB","Express"],
     link: "slug-url.vercel.app",
     github: "https://github.com/360Parminder/TheSlug"
   },
-  // {
-  //   title: "Quick Cart",
-  //   description: "Bill your customers in seconds. Quick Cart is a simple and easy to use cart application that allows you to create and manage your cart.",
-  //   image: "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
-  //   tech: ["React", "Node.js", "Tailwind","MongoDB","Express","Razorpay"],
-  //   link: "https://quickcart-store.vercel.app"
-  // }
-  
 ];
 
 const Projects = () => {
@@ -68,39 +59,62 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm"
+              className="group relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm h-60 transition-all duration-500 hover:h-auto"
+              whileHover={{ scale: 1.03 }}
             >
-              <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+              {/* Compact view (always visible) */}
+              <div className="relative h-full">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover w-full h-full absolute inset-0"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                  <div className="flex flex-wrap gap-1 mt-2 overflow-hidden max-h-6">
+                    {project.tech.slice(0, 3).map(tech => (
+                      <span key={tech} className="px-2 py-0.5 text-xs bg-white/10 rounded-full text-white/80">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.tech.length > 3 && (
+                      <span className="px-2 py-0.5 text-xs bg-white/10 rounded-full text-white/80">
+                        +{project.tech.length - 3}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="p-6">
+
+              {/* Expanded details (visible on hover) */}
+              <div className="p-6 bg-black/95 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 absolute inset-0 overflow-auto">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-white/70 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map(tech => (
-                    <span key={tech} className="px-3 py-1 text-sm bg-white/10 rounded-full text-white/80">
+                    <span key={tech} className="px-3 py-1 text-xs bg-white/10 rounded-full text-white/80">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity"
-                >
-                  View Project
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="inline-block ml-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity"
-                >
-                  Github
-                </a>
+                <div className="flex gap-2 mt-4">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity text-sm"
+                  >
+                    View Project
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity text-sm"
+                  >
+                    Github
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
