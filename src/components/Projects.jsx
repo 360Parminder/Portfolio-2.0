@@ -37,14 +37,14 @@ const projects = [
     description: "URl Shortener with a twist. Shorten your URLs and share them with the world. The Slug is a URL shortener that allows you to create short links for your long URLs.",
     image: Slug,
     tech: ["React", "Node.js", "Tailwind","MongoDB","Express"],
-    link: "slug-url.vercel.app",
+    link: "https://slug-url.vercel.app",
     github: "https://github.com/360Parminder/TheSlug"
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="min-h-screen w-full py-20 px-8 relative z-50 bg-gradient-to-b from-transparent to-purple-900/20">
+    <section className="min-h-screen w-full py-20 px-8 relative z-50 bg-black/50 bg-gradient-to-b from-transparent to-purple-900/20">
       <motion.div
         className="absolute inset-0 opacity-20"
         initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         Some Things I've Built
-        <span className="absolute top-1/2 left-80 w-64 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-400 hidden md:block"></span>
+        {/* <span className="absolute top-1/2 left-[22rem] w-64 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-400 hidden md:block"></span> */}
       </motion.h2>
       
       <div className="space-y-40">

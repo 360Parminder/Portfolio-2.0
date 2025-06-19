@@ -39,8 +39,8 @@ const ProjectItem = ({ project, index }) => {
               <motion.a
                 href={project.link}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                // rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
                 whileHover={{ x: 5 }}
               >
                 View Project <FaArrowRight className="text-xs" />
@@ -99,7 +99,7 @@ const ProjectItem = ({ project, index }) => {
             {/* Links with Micro-interactions */}
             <div className="flex gap-4">
               <motion.a
-                href={project.githubLink}
+                href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-300 transition-colors"
@@ -108,7 +108,7 @@ const ProjectItem = ({ project, index }) => {
                 <FaGithub /> Source Code
               </motion.a>
               <motion.a
-                href={project.liveLink}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-300 transition-colors"
