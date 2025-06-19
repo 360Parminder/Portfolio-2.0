@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
 import ProjectItem from './ProjectItem';
+import Rajdoot from '../assets/images/Rajdoot.png';
+import Swasthya from '../assets/images/Swasthya.png';
+import Aura from '../assets/images/Aura.png';
+import Slug from '../assets/images/Slug.png';
 
 const projects = [
   {
     title: "Rajdoot",
     description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
-    image: "rajdoot",
+    image: Rajdoot,
     tech: ["React", "Node.js", "MongoDB","IOT","Razorpay","Express","AWS","Cloudinary","IOT","Arduino","MQTT","Socket.io"],
     link: "https://rajdoot.parminder.info",
     github: "https://github.com/360parminder/rajdoot"
@@ -14,7 +18,7 @@ const projects = [
   {
     title: "Swasthya",
     description: "Swasthya is a platform that allows you to monitor your health and get alerts when your health is not good. It also allow you to track your family and friends medication and health.",
-    image: "swasthya",
+    image: Swasthya,
     tech: ["React Native", "Node.js", "Tailwind","MongoDB","Express","AWS","Cloudinary","IOT","React"],
     link: "https://swasthya.parminder.info/",
     github: "https://github.com/360parminder/swasthya"
@@ -23,7 +27,7 @@ const projects = [
   {
     title: "Aura",
     description: "Mobile-first responsive design with modern animations",
-    image: "aura",
+    image: Aura,
     tech: ["React", "Firebase", "Tailwind","Express","Node.js","MongoDB","Razorpay"],
     link: "https://auravideos.vercel.app",
     github: "https://github.com/360Parminder/Aura-Frontend"
@@ -31,7 +35,7 @@ const projects = [
   {
     title: "The Slug ",
     description: "URl Shortener with a twist. Shorten your URLs and share them with the world. The Slug is a URL shortener that allows you to create short links for your long URLs.",
-    image: "slug",
+    image: Slug,
     tech: ["React", "Node.js", "Tailwind","MongoDB","Express"],
     link: "slug-url.vercel.app",
     github: "https://github.com/360Parminder/TheSlug"
