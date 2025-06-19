@@ -1,144 +1,63 @@
-import React from 'react';
+// src/components/Contact.jsx
 import { motion } from 'framer-motion';
-import { IonIcon } from '@ionic/react';
-import { mailOutline, callOutline, locationOutline } from 'ionicons/icons';
-import emailjs from 'emailjs-com';
+import { FaGithub, FaHeart } from 'react-icons/fa';
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Get form values
-    const form = e.target;
-    const name = form.querySelector('input[type="text"]').value;
-    const email = form.querySelector('input[type="email"]').value;
-    const message = form.querySelector('textarea').value;
-
-    // Validate form fields
-    if (!name || !email || !message) {
-      alert('Please fill in all fields');
-      return;
-    }
-
-    // You need to install emailjs-com: npm install emailjs-com
-
-    // Replace with your actual EmailJS credentials
-    const serviceID = 'service_9o89hgj';
-    const templateID = 'template_fa0n6x8';
-    const userID = 'cnWQny2C-HFTbtRfj';
-
-    // Prepare template parameters
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message
-    };
-
-    // Send the email
-    emailjs.send(serviceID, templateID, templateParams, userID)
-      .then(() => {
-        // Clear the form
-        alert('Message sent successfully!');
-        form.reset();
-      })
-      .catch(error => {
-        console.error('Email sending failed:', error);
-        alert('Failed to send message. Please try again later.');
-      });
-    
-  };
-  const handleInputChange = (e) => {
-    // Handle input change logic here if needed
-    console.log(e.target.value);
-  };
   return (
-    <section id="contact" className="py-20 bg-black/95">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+    <section className="pt-10 w-full flex flex-col items-center justify-center px-8 bg-gradient-to-b from-gray-900 to-gray-800 relative z-50">
+      <div className="flex flex-col items-center justify-center flex-grow w-full">
+        <motion.div 
+          className="text-center max-w-2xl"
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-12 text-white"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          Get in Touch
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-amber-400">
+            Get In Touch
+          </h2>
+          <p className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
+            Although I'm not currently looking for new opportunities, my inbox is
+            always open. Whether you have a question or just want to say hi, I'll
+            try my best to get back to you!
+          </p>
+          <motion.a
+            href="mailto:360.parminder@gmail.com"
+            className="inline-block border-2 border-amber-400 px-8 py-2 rounded-lg text-amber-400 hover:bg-amber-400/10 hover:border-amber-300 hover:text-amber-300 transition-all duration-300 text-lg font-medium"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 0 15px rgba(251, 191, 36, 0.4)"
+            }}
+            whileTap={{ scale: 0.98 }}
           >
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                <IonIcon icon={mailOutline} className="text-2xl text-white" />
-              </div>
-              <div>
-                <h3 className="text-white font-medium">Email</h3>
-                <a href="mailto:360.parminder@gmail.com" className="text-white/70 hover:text-white transition-colors">
-                  360.parminder@gmail.com
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                <IonIcon icon={callOutline} className="text-2xl text-white" />
-              </div>
-              <div>
-                <h3 className="text-white font-medium">Phone</h3>
-                <a href="tel:+1234567890" className="text-white/70 hover:text-white transition-colors">
-                  +91 8779112732
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                <IonIcon icon={locationOutline} className="text-2xl text-white" />
-              </div>
-              <div>
-                <h3 className="text-white font-medium">Location</h3>
-                <p className="text-white/70">Rajasthan, India</p>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.form
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-            onSubmit={handleSubmit}
-            onChange={handleInputChange}
-          >
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-white/30 text-white"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-white/30 text-white"
-              />
-            </div>
-            <div>
-              <textarea
-                rows="4"
-                placeholder="Your Message"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-white/30 text-white"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:opacity-90 transition-opacity"
-            >
-              Send Message
-            </button>
-          </motion.form>
-        </div>
+            Say Hello
+          </motion.a>
+        </motion.div>
       </div>
+      
+      <motion.div 
+        className="mt-auto py-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="flex flex-col items-center">
+          <a 
+            href="https://github.com/360parminder" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-gray-400 hover:text-amber-300 transition-colors mb-2"
+          >
+            <FaGithub className="mr-2" />
+            <span>360parminder</span>
+          </a>
+          <div className="flex items-center text-gray-500 text-sm">
+            <FaHeart className="text-red-500 mr-1" />
+            <span>Developed with love by Parminder</span>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,49 +1,71 @@
-// src/components/Projects.jsx
 import { motion } from 'framer-motion';
 import ProjectItem from './ProjectItem';
 
 const projects = [
   {
-    title: "DataStoreX",
-    description: "Experience secure file storage, easy organization, and seamless sharing with our web-based file store. Access your files anytime, anywhere, and simplify your digital life with our reliable and user-friendly solution. Discover a new level of efficiency and productivity today.",
-    features: ["Secure File Storage", "Seamless Sharing", "Reliable Solution"],
-    githubLink: "https://github.com/STORM992002/datastorex",
-    liveLink: "https://datastorex.tech/",
-    image: "/assets/images/DataStoreX.png",
-    align: "right"
+    title: "Rajdoot",
+    description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
+    image: "rajdoot",
+    tech: ["React", "Node.js", "MongoDB","IOT","Razorpay","Express","AWS","Cloudinary","IOT","Arduino","MQTT","Socket.io"],
+    link: "https://rajdoot.parminder.info",
+    github: "https://github.com/360parminder/rajdoot"
+
   },
   {
-    title: "Yingzi",
-    description: "A minimal, dark purple theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    features: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-    githubLink: "https://github.com/STORM992002/yingzi",
-    liveLink: "https://yingzi.netlify.app/",
-    image: "/assets/images/yingzi.png",
-    align: "left"
+    title: "Swasthya",
+    description: "Swasthya is a platform that allows you to monitor your health and get alerts when your health is not good. It also allow you to track your family and friends medication and health.",
+    image: "swasthya",
+    tech: ["React Native", "Node.js", "Tailwind","MongoDB","Express","AWS","Cloudinary","IOT","React"],
+    link: "https://swasthya.parminder.info/",
+    github: "https://github.com/360parminder/swasthya"
+
   },
   {
-    title: "Weather",
-    description: "The weather web app provides real-time forecasts, alerts, and interactive maps. Users can track rainfall, check cloud cover, and stay informed about changing weather conditions.",
-    features: ["Current Weather Display", "User-Friendly interface", "Sunrise and Sunset Times"],
-    githubLink: "https://github.com/STORM992002/weather",
-    liveLink: "https://weathir.netlify.app/",
-    image: "/assets/images/weather.png",
-    align: "right"
-  }
+    title: "Aura",
+    description: "Mobile-first responsive design with modern animations",
+    image: "aura",
+    tech: ["React", "Firebase", "Tailwind","Express","Node.js","MongoDB","Razorpay"],
+    link: "https://auravideos.vercel.app",
+    github: "https://github.com/360Parminder/Aura-Frontend"
+  },
+  {
+    title: "The Slug ",
+    description: "URl Shortener with a twist. Shorten your URLs and share them with the world. The Slug is a URL shortener that allows you to create short links for your long URLs.",
+    image: "slug",
+    tech: ["React", "Node.js", "Tailwind","MongoDB","Express"],
+    link: "slug-url.vercel.app",
+    github: "https://github.com/360Parminder/TheSlug"
+  },
 ];
 
 const Projects = () => {
   return (
-    <section className="min-h-screen w-full py-20 px-8 relative">
+    <section className="min-h-screen w-full py-20 px-8 relative z-50 bg-gradient-to-b from-transparent to-purple-900/20">
+      <motion.div
+        className="absolute inset-0 opacity-20"
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: [0.1, 0.3, 0.1],
+        }}
+        transition={{ 
+          duration: 8,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      >
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/30 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-indigo-600/20 blur-3xl"></div>
+      </motion.div>
+      
       <motion.h2 
-        className="text-3xl md:text-4xl mb-20 relative"
+        className="text-3xl md:text-4xl mb-20 relative text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         Some Things I've Built
-        <span className="absolute top-1/2 left-80 w-64 h-0.5 bg-cyan-400 hidden md:block"></span>
+        <span className="absolute top-1/2 left-80 w-64 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-400 hidden md:block"></span>
       </motion.h2>
       
       <div className="space-y-40">
@@ -55,6 +77,8 @@ const Projects = () => {
           />
         ))}
       </div>
+      
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
     </section>
   );
 };

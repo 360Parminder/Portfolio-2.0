@@ -1,5 +1,3 @@
-// src/App.js
-import { motion } from 'framer-motion';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -11,7 +9,7 @@ function App() {
     <div className="bg-black text-white font-sans">
       <SideElements />
       
-      <div className="max-w-6xl mx-auto relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative overflow-hidden ">
         {/* Page 1 - Header */}
         <Header />
         

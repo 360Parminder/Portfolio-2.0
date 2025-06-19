@@ -1,4 +1,3 @@
-// src/components/SideElements.jsx
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram, FaGithub, FaTwitter, FaCodepen } from 'react-icons/fa';
 
@@ -40,6 +39,8 @@ const SideElements = () => {
         <a 
           href="mailto:360.parminder@gmail.com" 
           className="text-sm tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors"
+            target="_blank" rel="noopener noreferrer"
+            style={{ writingMode: 'vertical-rl' }}
         >
           360.parminder@gmail.com
         </a>
