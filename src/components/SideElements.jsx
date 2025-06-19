@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaInstagram, FaGithub, FaTwitter, FaCodepen } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub, FaTwitter, FaCodepen,FaMedium } from 'react-icons/fa';
 
 const SideElements = () => {
   return (
@@ -11,20 +11,20 @@ const SideElements = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <a href="https://www.linkedin.com/in/parminder-singh-storm/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        <a href="https://www.linkedin.com/in/360parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
           <FaLinkedin />
         </a>
-        <a href="https://www.instagram.com/_broken__storm_/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        <a href="https://www.instagram.com/360_parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
           <FaInstagram />
         </a>
-        <a href="https://github.com/STORM992002" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        <a href="https://github.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
           <FaGithub />
         </a>
-        <a href="https://twitter.com/Parmind32178223" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        <a href="https://twitter.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
           <FaTwitter />
         </a>
-        <a href="https://codepen.io/STORM992002" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
-          <FaCodepen />
+        <a href="https://medium.com/@360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+          <FaMedium />
         </a>
         <div className="w-px h-32 bg-white"></div>
       </motion.div>

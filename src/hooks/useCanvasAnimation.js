@@ -12,7 +12,7 @@ const useCanvasAnimation = (canvasRef) => {
     const context = canvas.getContext('2d');
     const frameCount = 250;
 
-    const currentFrame = (index) => `/src/assets/images/photos/${(index + 1).toString()}.png`;
+    const currentFrame = (index) => `/photos/${(index + 1).toString()}.png`;
     const images = [];
     let ball = { frame: 0 };
 
