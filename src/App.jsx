@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 import SideElements from './components/SideElements';
 
 function App() {
+  
   return (
     <div className="bg-black text-white font-sans">
       <SideElements />
