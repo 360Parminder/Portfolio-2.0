@@ -14,12 +14,10 @@ body {
   background-color: #000000;
   color: var(--font-color);
 }
-
 .logo {
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
-
 .logo:hover {
   color: #646cff;
   transform: translateY(-2px);
