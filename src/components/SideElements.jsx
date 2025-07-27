@@ -11,21 +11,36 @@ const SideElements = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <a href="https://www.linkedin.com/in/360parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        <motion.a
+          href="https://www.linkedin.com/in/360parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors"
+          whileHover={{ rotate:33, scale: 1.2, transition: { duration: 0.4 },x: 10,y:-10 }}
+          whileTap={{ scale: 0.9 }}>
           <FaLinkedin />
-        </a>
-        <a href="https://www.instagram.com/360_parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        </motion.a>
+        <motion.a
+          href="https://www.instagram.com/360_parminder/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors"
+          whileHover={{ rotate:30, scale: 1.2, transition: { duration: 0.4 },x: 10,y:-10 }}
+          whileTap={{ scale: 0.9 }}>
           <FaInstagram />
-        </a>
-        <a href="https://github.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        </motion.a>
+        <motion.a
+          href="https://github.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors"
+          whileHover={{ rotate:30, scale: 1.2, transition: { duration: 0.4 },x: 10,y:-10 }}
+          whileTap={{ scale: 0.9 }}>
           <FaGithub />
-        </a>
-        <a href="https://twitter.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        </motion.a>
+        <motion.a
+          href="https://twitter.com/360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors"
+          whileHover={{ rotate:30, scale: 1.2, transition: { duration: 0.4 },x: 10,y:-10 }}
+          whileTap={{ scale: 0.9 }}>
           <FaTwitter />
-        </a>
-        <a href="https://medium.com/@360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors">
+        </motion.a>
+        <motion.a
+          href="https://medium.com/@360parminder" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition-colors"
+          whileHover={{ rotate:30, scale: 1.2, transition: { duration: 0.4 },x: 10,y:-10 }}
+          whileTap={{ scale: 0.9 }}>
           <FaMedium />
-        </a>
+        </motion.a>
         <div className="w-px h-32 bg-white"></div>
       </motion.div>
       
@@ -36,14 +51,15 @@ const SideElements = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.8 }}
       >
-        <a 
+        <motion.a 
           href="mailto:360.parminder@gmail.com" 
           className="text-sm tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors"
             target="_blank" rel="noopener noreferrer"
             style={{ writingMode: 'vertical-rl' }}
+        whileHover={{ y:-10,scale:1.1, transition: { duration: 0.4 } }}
         >
           360.parminder@gmail.com
-        </a>
+        </motion.a>
         <div className="w-px h-24 bg-white mt-4"></div>
       </motion.div>
     </>
