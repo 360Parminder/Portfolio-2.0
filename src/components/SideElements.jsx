@@ -6,7 +6,7 @@ const SideElements = () => {
     <>
       {/* Left Social Icons */}
       <motion.div 
-        className="fixed left-8 bottom-0 hidden md:flex flex-col items-center space-y-6 text-2xl z-50"
+        className="fixed left-6 bottom-0 hidden md:flex flex-col items-center space-y-6 text-2xl z-50"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.8 }}
