@@ -7,7 +7,7 @@ import SideElements from './components/SideElements';
 function App() {
   
   return (
-    <div className="bg-black text-white font-sans">
+    <div className="bg-background text-foreground font-sans">
       <SideElements />
       
       <div className="max-w-7xl mx-auto relative overflow-hidden ">

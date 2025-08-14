@@ -41,7 +41,7 @@ const SideElements = () => {
           whileTap={{ scale: 0.9 }}>
           <FaMedium />
         </motion.a>
-        <div className="w-px h-32 bg-white"></div>
+        <div className="w-[3px] h-32 dark:bg-neutral-200 bg-neutral-900 rounded-t-2xl "></div>
       </motion.div>
       
       {/* Right Email */}
@@ -60,7 +60,7 @@ const SideElements = () => {
         >
           360.parminder@gmail.com
         </motion.a>
-        <div className="w-px h-24 bg-white mt-4"></div>
+        <div className="dark:bg-neutral-200 bg-neutral-900 w-[3px] h-24 mt-2 rounded-t-2xl"></div>
       </motion.div>
     </>
   );

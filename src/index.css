@@ -1,21 +1,51 @@
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
 
-@theme {
-  --animate-slide: slide 6000ms linear infinite;
 
-  --color-purple-300: #c4b5fd;
-  --color-purple-400: #a78bfa;
-  --color-purple-500: #8b5cf6;
-  --color-purple-600: #6d28d9;
-  --color-purple-700: #3d1b8a;
-  --color-purple-800: #2d1060;
-  --color-purple-900: #1e0b36;
+:root {
+  --foreground: #ffffff;
+  --background: #000000;
+  --border: #444444;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --highlight: #646cff;
+  --muted: #888888;
+  --accent: #ff007f;
+  --error: #ff4d4f;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --info: #2196f3;
+}
 
-  --shadow-glass: 0 8px 32px 0 rgba(107, 70, 193, 0.15);
+.dark{
+    --background: #ffffff;
+    --foreground: #000000;
+    --border: #888888;
+    --shadow: rgba(255, 255, 255, 0.5);
+    --highlight: #646cff;
+    --muted: #888888;
+    --accent: #ff007f;
+    --error: #ff4d4f;
+    --success: #4caf50;
+    --warning: #ff9800;
+    --info: #2196f3;
+}
 
+@theme inline{
+    --animate-slide: slide 10s linear infinite;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-border: var(--border);
+    --color-shadow: var(--shadow);
+    --color-highlight: var(--highlight);
+    --color-muted: var(--muted);
+    --color-accent: var(--accent);
+    --color-error: var(--error);
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-info: var(--info);
+    --font-family: "Hepta Slab", serif;
+    --shadow-glass: 0 8px 32px 0 rgba(107, 70, 193, 0.15);
   --backdrop-blur-xs: 2px;
 
   @keyframes slide {
@@ -28,35 +58,29 @@ layer(base);
   }
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --border: #1b1212;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --highlight: #646cff;
+    --muted: #888888;
+    --accent: #ff007f;
+    --error: #ff4d4f;
+    --success: #4caf50;
+    --warning: #ff9800;
+    --info: #2196f3;
   }
+  
 }
-
-:root {
-  --font-color: #ffffff;
-}
-
-body {
+/* body {
   margin: 0;
   font-family: "Hepta Slab", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
-  color: var(--font-color);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 .logo {
   font-size: 1.5rem;
@@ -97,4 +121,4 @@ body {
 
 .btn-circle {
   @apply w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300 text-white;
-}
+} */
