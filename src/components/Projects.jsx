@@ -44,7 +44,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="min-h-screen w-full py-20 px-8 relative z-50 bg-black/50 bg-gradient-to-b from-transparent to-purple-900/20">
+    <section className="min-h-screen w-full py-20 px-8 relative z-50 bg-black/50 bg-linear-to-b from-transparent to-purple-900/20">
       <motion.div
         className="absolute inset-0 opacity-20"
         initial={{ opacity: 0 }}
@@ -62,14 +62,14 @@ const Projects = () => {
       </motion.div>
       
       <motion.h2 
-        className="text-3xl md:text-4xl mb-20 relative text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"
+        className="text-3xl md:text-4xl mb-20 relative text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-cyan-400"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         Some Things I've Built
-        {/* <span className="absolute top-1/2 left-[22rem] w-64 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-400 hidden md:block"></span> */}
+        {/* <span className="absolute top-1/2 left-88 w-64 h-0.5 bg-linear-to-r from-purple-500 to-cyan-400 hidden md:block"></span> */}
       </motion.h2>
       
       <div className="space-y-40">
@@ -82,7 +82,7 @@ const Projects = () => {
         ))}
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-purple-900/10 to-transparent"></div>
     </section>
   );
 };

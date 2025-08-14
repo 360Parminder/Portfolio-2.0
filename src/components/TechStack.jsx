@@ -74,7 +74,7 @@ const TechStack = () => {
               className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${tech.color} bg-opacity-20`}>
+                <div className={`p-3 rounded-xl bg-linear-to-r ${tech.color} bg-opacity-20`}>
                   <IonIcon
                     icon={tech.icon}
                     className="text-3xl text-white"
@@ -92,7 +92,7 @@ const TechStack = () => {
                   initial={{ width: 0 }}
                   whileInView={{ width: tech.level }}
                   transition={{ duration: 1.5, delay: 0.2 }}
-                  className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${tech.color}`}
+                  className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${tech.color}`}
                 />
               </div>
             </motion.div>

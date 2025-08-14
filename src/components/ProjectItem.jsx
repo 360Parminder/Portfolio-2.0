@@ -28,14 +28,14 @@ const ProjectItem = ({ project, index }) => {
           }}
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl shadow-2xl group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-purple-600/20 to-pink-600/20 rounded-2xl shadow-2xl group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-lg">
             <img
               src={`${project.image}`}
               alt={project.title}
               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <motion.a
                 href={project.link}
                 target="_blank"

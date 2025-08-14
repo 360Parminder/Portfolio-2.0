@@ -66,7 +66,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 shadow-xl">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-clip-text text-transparent bg-linear-to-r from-green-400 to-blue-500">
                 My Technical Skills
               </h3>
               

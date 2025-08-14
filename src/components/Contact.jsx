@@ -4,8 +4,8 @@ import { FaGithub, FaHeart } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section className="pt-10 w-full flex flex-col items-center justify-center px-8 bg-gradient-to-b from-gray-900 to-gray-800 relative z-50">
-      <div className="flex flex-col items-center justify-center flex-grow w-full">
+    <section className="pt-10 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b from-gray-900 to-gray-800 relative z-50">
+      <div className="flex flex-col items-center justify-center grow w-full">
         <motion.div 
           className="text-center max-w-2xl"
           initial={{ opacity: 0, y: 50 }}
@@ -13,7 +13,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-amber-400">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-amber-200 to-amber-400">
             Get In Touch
           </h2>
           <p className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
