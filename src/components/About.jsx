@@ -34,26 +34,26 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center mb-8">
-              <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
+              {/* <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
                 <IoPerson className="text-2xl text-white" />
-              </div>
-              <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              </div> */}
+              <h2 className="text-4xl font-bold ">
                 About Me
               </h2>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-2">
               <p className="text-lg leading-relaxed">
-                I'm a passionate <span className="text-cyan-400 font-medium">Web Development Engineer</span> currently working as a <span className="text-red-400 font-medium">Freelancer</span>. I specialize in building modern, responsive web applications with cutting-edge technologies.
+                Hello World ! I am Parminder Singh - Web and Mobile App Developer with a passion for creating dynamic and responsive web applications. I specialize in building user-friendly interfaces and robust backend systems that enhance user experience and drive engagement.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Alongside my professional work, I'm pursuing a <span className="text-blue-400 font-medium">Bachelor of Technology</span> in Computer Science Engineering at <span className="text-cyan-400">Bikaner Technical University</span>, where I'm constantly expanding my knowledge and skills.
+                
               </p>
               
-              <p className="text-lg leading-relaxed">
+              {/* <p className="text-lg leading-relaxed">
                 When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers.
-              </p>
+              </p> */}
             </div>
           </motion.div>
           
