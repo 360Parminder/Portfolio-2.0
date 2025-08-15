@@ -6,7 +6,7 @@ const SideElements = () => {
     <>
       {/* Left Social Icons */}
       <motion.div 
-        className="fixed left-6 bottom-0 hidden md:flex flex-col items-center space-y-6 text-2xl z-50"
+        className="fixed left-6 bottom-0 hidden md:flex flex-col items-center space-y-6 text-2xl z-100"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.8 }}
@@ -53,14 +53,14 @@ const SideElements = () => {
       >
         <motion.a 
           href="mailto:360.parminder@gmail.com" 
-          className="text-sm tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors"
+          className="text-md tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors"
             target="_blank" rel="noopener noreferrer"
             style={{ writingMode: 'vertical-rl' }}
         whileHover={{ y:-10,scale:1.1, transition: { duration: 0.4 } }}
         >
           360.parminder@gmail.com
         </motion.a>
-        <div className="dark:bg-neutral-200 bg-neutral-900 w-[3px] h-24 mt-2 rounded-t-2xl"></div>
+        <div className="dark:bg-neutral-200 bg-neutral-900 w-[3px] h-32 mt-6 rounded-t-2xl"></div>
       </motion.div>
     </>
   );
