@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black py-12">
+    <footer className="bg-neutral-200 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           <motion.div

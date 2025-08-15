@@ -24,7 +24,7 @@ const Header = () => {
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide">
               <span
                 className=""
-                style={{ color: 'transparent', WebkitTextStroke: '2px white' }}
+                style={{ color: 'transparent', WebkitTextStroke: `2px var(--foreground)` }}
               >
                 WEB
               </span>
@@ -33,7 +33,7 @@ const Header = () => {
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide">
               <span
                 className=""
-                style={{ color: 'transparent', WebkitTextStroke: '2px white' }}
+                style={{ color: 'transparent', WebkitTextStroke: `2px var(--foreground)` }}
               >
                 WEB
               </span>

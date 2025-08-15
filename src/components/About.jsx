@@ -1,142 +1,65 @@
 import { motion } from 'framer-motion';
-import { 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaJs, 
-  FaPython, 
-  FaGithub, 
-  FaNodeJs, 
-  FaReact,
-  FaDatabase,
-  FaServer,
-  FaCloud,
-  FaAws,
-  FaMicrosoft,
-  FaMicrochip,
-  FaDocker,
-} from 'react-icons/fa';
-import { IoPerson, IoLogoFirebase } from 'react-icons/io5';
-import { DiPostgresql, DiMongodb } from 'react-icons/di';
-import { BsGoogle } from 'react-icons/bs';
-
 
 const About = () => {
   return (
-    <section id="about" className="relative min-h-screen w-full flex items-center justify-center   text-gray-100">
+    <section id="about" className="relative min-h-screen w-full flex items-center justify-center">
       <div className="w-full mx-auto">
         <div className="flex flex-col lg:flex-row gap-[20vw] items-center"> {/* Changed gap to 20vw */}
           {/* About Me Text - Reduced width to account for larger gap */}
-          <motion.div 
+          <motion.div
             className="lg:w-[35%] absolute" // Reduced from 1/2 to account for larger gap
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center mb-8">
-              {/* <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
-                <IoPerson className="text-2xl text-white" />
-              </div> */}
-              <h2 className="text-4xl font-bold ">
-                About Me
-              </h2>
-            </div>
-            
-            <div className="space-y-2">
-              <p className="text-lg leading-relaxed">
-                Hello World ! I am Parminder Singh - Web and Mobile App Developer with a passion for creating dynamic and responsive web applications. I specialize in building user-friendly interfaces and robust backend systems that enhance user experience and drive engagement.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                
-              </p>
-              
-              {/* <p className="text-lg leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers.
-              </p> */}
+            <div className="dark:bg-gray-800/50 bg-neutral-200 dark:border-gray-700 border-neutral-200 backdrop-blur-sm rounded-lg p-4 border shadow-xl">
+              <div className=" col-span-2 grid grid-cols-1">
+                <ul className="space-y-2 grid grid-cols-4">
+                  <li className="flex justify-center items-center"><img src="/icons/js.svg" alt="JavaScript" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/python.svg" alt="Python" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/typescript.svg" alt="TypeScript" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/cpp.svg" alt="C++" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/motion.svg" alt="Motion" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/redux.svg" alt="Redux" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/react-router-dark.svg" alt="React Router" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/react-navigation.svg" alt="React Navigation" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/firebase.svg" alt="Firebase" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/aws.svg" alt="AWS" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/azure.svg" alt="Azure" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/arduino.svg" alt="Arduino" className="mr-2 size-10" /> </li>
+                  {/* <li className="flex items-center"><BsGoogle className="mr-2 text-red-400" /> Google Gemini</li> */}
+                  {/* <li className="flex items-center"><img src="/icons/react.svg" alt="React Native" className="mr-2 size-10" /> </li> */}
+                  {/* <li className="flex items-center"><img src="/icons/express.svg" alt="Express.js" className="mr-2" /> Express.js</li> */}
+                </ul>
+              </div>
             </div>
           </motion.div>
-          
+
           {/* Skills Section - Reduced width to account for larger gap */}
-          <motion.div 
+          <motion.div
             className="lg:w-[35%] absolute right-0"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 shadow-xl">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-clip-text text-transparent bg-linear-to-r from-green-400 to-blue-500">
-                My Technical Skills
-              </h3>
-              
-              <div className="grid grid-cols-1  gap-6">
-                {/* Frontend */}
-                <div className="space-y-2 col-span-2">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-md bg-blue-500/20 flex items-center justify-center mr-3">
-                      <FaReact className="text-blue-400" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-blue-400">Frontend</h4>
-                  </div>
-                  <ul className="space-y-2 pl-3 grid grid-cols-3">
-                    <li className="flex items-center"><FaJs className="mr-2 text-yellow-400" /> JavaScript</li>
-                    <li className="flex items-center"><FaJs className="mr-2 text-blue-600" /> TypeScript</li>
-                    <li className="flex items-center"><FaReact className="mr-2 text-cyan-400" /> React.js</li>
-                    <li className="flex items-center"><FaReact className="mr-2 text-blue-400" /> React Native</li>
-                    <li className="flex items-center"><FaCss3Alt className="mr-2 text-teal-400" /> Tailwind CSS</li>
-                  </ul>
-                </div>
-                
-                {/* Backend */}
-                <div className="space-y-2 col-span-2 ">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-md bg-green-500/20 flex items-center justify-center mr-3">
-                      <FaServer className="text-green-400" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-green-400">Backend</h4>
-                  </div>
-                  <ul className="space-y-2 pl-3 grid grid-cols-3">
-                    <li className="flex items-center"><FaNodeJs className="mr-2 text-green-500" /> Node.js</li>
-                    <li className="flex items-center"><FaServer className="mr-2 text-gray-300" /> Express.js</li>
-                    <li className="flex items-center"><FaPython className="mr-2 text-blue-400" /> Python</li>
+            <div className="dark:bg-gray-800/50 bg-neutral-200 dark:border-gray-700 border-neutral-200 backdrop-blur-sm rounded-lg p-4 border shadow-xl">
+              <div className="col-span-2 grid grid-cols-1">
+                <ul className="space-y-2 grid grid-cols-4">
+                  <li className="flex justify-center items-center"><img src="/icons/react.svg" alt="React.js" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/nodejs.svg" alt="Node.js" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/tailwindcss.svg" alt="Tailwind CSS" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/shadcn-ui-dark.svg" alt="ShadCN UI" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/git.svg" alt="Git & GitHub" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/docker.svg" alt="Docker" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/postgresSQL.svg" alt="PostgreSQL" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/mongodb.svg" alt="MongoDB" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/figma.svg" alt="Figma" className="mr-2 size-10" /> </li>
+                  <li className="flex justify-center items-center"><img src="/icons/npm.svg" alt="NPM" className="mr-2 size-10" /> </li>
 
-                  </ul>
-                </div>
-                {/* Database */}
-                <div className="space-y-2 col-span-2">
-                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-md bg-purple-500/20 flex items-center justify-center mr-3">
-                      <FaDatabase className="text-purple-400" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-purple-400">Database</h4>
-                  </div>
-                  <ul className="space-y-2 pl-3 grid grid-cols-3">
-                    <li className="flex items-center"><DiPostgresql className="mr-2 text-blue-500" /> PostgreSQL</li>
-                    <li className="flex items-center"><DiMongodb className="mr-2 text-green-500" /> MongoDB</li>
-                    <li className="flex items-center"><IoLogoFirebase className="mr-2 text-amber-500" /> Firebase</li>
-                  </ul>
-                </div>
-                
-                {/* Cloud & Tools */}
-                <div className="space-y-2 col-span-2">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-md bg-orange-500/20 flex items-center justify-center mr-3">
-                      <FaCloud className="text-orange-400" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-orange-400">Cloud & Tools</h4>
-                  </div>
-                  <div className="grid grid-cols-1 gap-4 pl-3">
-                    <ul className="space-y-2 grid grid-cols-2">
-                      <li className="flex items-center"><FaAws className="mr-2 text-orange-400" /> AWS</li>
-                      <li className="flex items-center"><FaMicrosoft className="mr-2 text-blue-400" /> Azure</li>
-                      <li className="flex items-center"><BsGoogle className="mr-2 text-red-400" /> Google Gemini</li>
-                      <li className="flex items-center"><FaMicrochip className="mr-2 text-teal-400" /> Arduino</li>
-                      <li className="flex items-center"><FaGithub className="mr-2 text-gray-300" /> Git & GitHub</li>
-                      <li className="flex items-center"><FaDocker className="mr-2 text-blue-400" /> Docker</li>
-                    </ul>
-                  </div>
-                </div>
+                </ul>
+
               </div>
             </div>
           </motion.div>
