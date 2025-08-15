@@ -3,8 +3,17 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaHeart } from 'react-icons/fa';
 
 const Contact = () => {
+  const darkMode = document.documentElement.classList.contains('dark');
+  const handleThemeToggle = () => {
+    const currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', currentTheme);
+  };
   return (
-    <section className="pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b dark:from-neutral-900 dark:to-neutral-800 from-neutral-200 to-neutral-100 relative z-50">
+    <section className="relative pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b dark:from-neutral-900 dark:to-neutral-800 from-neutral-200 to-neutral-100 z-50">
+     <button onClick={handleThemeToggle}>
+      {darkMode ? 'Light Mode' : 'Dark Mode'}
+     </button>
       <div className="flex flex-col items-center justify-center grow w-full">
         <motion.div 
           className="text-center max-w-2xl"
