@@ -1,68 +1,65 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 
 const About = () => {
+  // Define all technology icons in one array
+  const techIcons = [
+    { src: "/icons/motion.svg", alt: "Motion" },
+    { src: "/icons/typescript.svg", alt: "TypeScript" },
+    { src: "/icons/cpp.svg", alt: "C++" },
+    { src: "/icons/redux.svg", alt: "Redux" },
+    { src: "/icons/arduino.svg", alt: "Arduino" },
+    { src: "/icons/react-router-dark.svg", alt: "React Router" },
+    { src: "/icons/js.svg", alt: "JavaScript" },
+    { src: "/icons/python.svg", alt: "Python" },
+    { src: "/icons/react-navigation.svg", alt: "React Navigation" },
+    { src: "/icons/firebase.svg", alt: "Firebase" },
+    { src: "/icons/azure.svg", alt: "Azure" },
+    { src: "/icons/postgresSQL.svg", alt: "PostgreSQL" },
+    { src: "/icons/react.svg", alt: "React.js" },
+    { src: "/icons/nodejs.svg", alt: "Node.js" },
+    { src: "/icons/tailwindcss.svg", alt: "Tailwind CSS" },
+    { src: "/icons/shadcn-ui-dark.svg", alt: "ShadCN UI" },
+    { src: "/icons/git.svg", alt: "Git & GitHub" },
+    { src: "/icons/mongodb.svg", alt: "MongoDB" },
+    { src: "/icons/aws.svg", alt: "AWS" },
+    { src: "/icons/npm.svg", alt: "NPM" },
+    { src: "/icons/figma.svg", alt: "Figma" },
+    { src: "/icons/docker.svg", alt: "Docker" },
+  ];
+
+  // Generate three randomly shuffled arrays using useMemo to prevent re-shuffling on every render
+  const randomizedLists = useMemo(() => {
+    const shuffle = (array) => {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]]; // Swap elements
+      }
+      return newArray;
+    };
+    
+    return [
+      shuffle([...techIcons]),
+      shuffle([...techIcons]),
+      shuffle([...techIcons])
+    ];
+  }, []);
+
   return (
     <section id="about" className="relative min-h-screen w-full flex items-center justify-center">
       <div className="w-full mx-auto">
-        <div className="flex flex-col lg:flex-row gap-[20vw] items-center"> {/* Changed gap to 20vw */}
-          {/* About Me Text - Reduced width to account for larger gap */}
-          <motion.div
-            className="lg:w-[35%] absolute" // Reduced from 1/2 to account for larger gap
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="dark:bg-gray-800/50 bg-neutral-200 dark:border-gray-700 border-neutral-200 backdrop-blur-sm rounded-lg p-4 border shadow-xl">
-              <div className=" col-span-2 grid grid-cols-1">
-                <ul className="space-y-2 grid grid-cols-4">
-                  <li className="flex justify-center items-center"><img src="/icons/js.svg" alt="JavaScript" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/python.svg" alt="Python" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/typescript.svg" alt="TypeScript" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/cpp.svg" alt="C++" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/motion.svg" alt="Motion" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/redux.svg" alt="Redux" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/react-router-dark.svg" alt="React Router" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/react-navigation.svg" alt="React Navigation" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/firebase.svg" alt="Firebase" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/aws.svg" alt="AWS" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/azure.svg" alt="Azure" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/arduino.svg" alt="Arduino" className="mr-2 size-10" /> </li>
-                  {/* <li className="flex items-center"><BsGoogle className="mr-2 text-red-400" /> Google Gemini</li> */}
-                  {/* <li className="flex items-center"><img src="/icons/react.svg" alt="React Native" className="mr-2 size-10" /> </li> */}
-                  {/* <li className="flex items-center"><img src="/icons/express.svg" alt="Express.js" className="mr-2" /> Express.js</li> */}
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Skills Section - Reduced width to account for larger gap */}
-          <motion.div
-            className="lg:w-[35%] absolute right-0"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="dark:bg-gray-800/50 bg-neutral-200 dark:border-gray-700 border-neutral-200 backdrop-blur-sm rounded-lg p-4 border shadow-xl">
-              <div className="col-span-2 grid grid-cols-1">
-                <ul className="space-y-2 grid grid-cols-4">
-                  <li className="flex justify-center items-center"><img src="/icons/react.svg" alt="React.js" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/nodejs.svg" alt="Node.js" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/tailwindcss.svg" alt="Tailwind CSS" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/shadcn-ui-dark.svg" alt="ShadCN UI" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/git.svg" alt="Git & GitHub" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/docker.svg" alt="Docker" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/postgresSQL.svg" alt="PostgreSQL" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/mongodb.svg" alt="MongoDB" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/figma.svg" alt="Figma" className="mr-2 size-10" /> </li>
-                  <li className="flex justify-center items-center"><img src="/icons/npm.svg" alt="NPM" className="mr-2 size-10" /> </li>
-
-                </ul>
-
-              </div>
-            </div>
-          </motion.div>
+        <div className='w-full px-3 mask-r-from-70% mask-l-from-70% space-y-4'>
+          {randomizedLists.map((list, index) => (
+            <ul key={index} className="flex   md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-marquee  ">
+              {list.map((icon, iconIndex) => (
+                <li key={iconIndex} className="flex justify-center items-center ">
+                  <img src={icon.src} alt={icon.alt} className="mr-2 size-12" />
+                  {/* <p>{icon.alt}</p> */}
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
     </section>

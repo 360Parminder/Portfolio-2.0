@@ -3,17 +3,10 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaHeart } from 'react-icons/fa';
 
 const Contact = () => {
-  const darkMode = document.documentElement.classList.contains('dark');
-  const handleThemeToggle = () => {
-    const currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', currentTheme);
-  };
+ 
   return (
-    <section className="relative pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b dark:from-neutral-900 dark:to-neutral-800 from-neutral-200 to-neutral-100 z-50">
-     <button onClick={handleThemeToggle}>
-      {darkMode ? 'Light Mode' : 'Dark Mode'}
-     </button>
+    <section className="relative pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b from-neutral-00 to-neutral-400 dark:to-neutral-900  z-40">
+    
       <div className="flex flex-col items-center justify-center grow w-full">
         <motion.div 
           className="text-center max-w-2xl"
@@ -51,12 +44,12 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="flex items-center text-gray-400 hover:text-amber-300 transition-colors mb-2"
           >
-            <FaGithub className="mr-2" />
-            <span>360parminder</span>
+            <FaGithub className="mr-2 dark:text-neutral-300 text-neutral-900" />
+            <span className="dark:text-neutral-300 text-neutral-900">360parminder</span>
           </a>
           <div className="flex items-center text-gray-500 text-sm">
-            <FaHeart className="text-red-500 mr-1" />
-            <span>Developed with love by Parminder</span>
+            <FaHeart className="text-red-500 mr-1 " />
+            <span className="dark:text-neutral-300 text-neutral-900">Developed with love by Parminder Singh</span>
           </div>
         </div>
       </motion.div>

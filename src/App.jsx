@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import SideElements from './components/SideElements';
 import MobileScreen from './components/MobileScreen';
+import { MoonIcon, SunIcon } from 'lucide-react';
 
 function useIsMobile() {
   const getIsMobile = () =>
@@ -30,6 +31,12 @@ function useIsMobile() {
 
 function App() {
   const isMobile = useIsMobile();
+  const darkMode = document.documentElement.classList.contains('dark');
+  const handleThemeToggle = () => {
+    const currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', currentTheme);
+  };
 
   if (isMobile) {
     return (
@@ -38,7 +45,10 @@ function App() {
   }
 
   return (
-    <div className="bg-background text-foreground font-sans">
+    <div className="bg-background text-foreground font-sans relative">
+      {/* <button className='fixed bottom-5 right-[5rem] z-100' onClick={handleThemeToggle}>
+        {darkMode ? <SunIcon /> : <MoonIcon />}
+      </button> */}
       <SideElements />
       <div className="max-w-7xl mx-auto relative overflow-hidden px-4">
         {/* Page 1 - Header */}

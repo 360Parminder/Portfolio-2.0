@@ -103,7 +103,7 @@ const Projects = () => {
         <span className="absolute top-1/2 left-88 w-64 h-0.5 bg-linear-to-r from-purple-500 to-cyan-400 hidden md:block"></span>
       </motion.h2> */}
 
-      <div className="space-y-40">
+      <div className="max-w-6xl flex flex-col items-center">
         {projects.map((project, index) => (
           <ProjectItem
             key={index}
