@@ -20,7 +20,7 @@ const ProjectItem = ({ project, index }) => {
       >
         {/* Link Button */}
         <a
-          className="absolute top-5 right-5 bg-neutral-200/60 dark:bg-neutral-900/60 p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute top-5 z-10 right-5 bg-neutral-200/60 dark:bg-neutral-900/60 p-3 rounded-full shadow-md hover:scale-110 transition"
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const ProjectItem = ({ project, index }) => {
 
         {/* Project Image */}
         <motion.img
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1 }}
           transition={{ duration: 0.3 }}
           className="w-full h-auto rounded-md"
           src={project.image}
