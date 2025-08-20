@@ -47,11 +47,19 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="relative min-h-screen w-full flex items-center justify-center">
+    <section id="about" className="relative min-h-screen w-full flex  flex-col items-center justify-between pt-14 pb-20 font-family">
+      <div className="flex flex-row space-x-40 justify-between">
+        <p className='w-[40%] text-xl font-family'>
+          Hello, World! I am Parminder Singh — a Web and APP Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
+        </p>
+        <p className='w-[40%] text-xl font-family'>
+          I specialize in building responsive and accessible web applications using the latest technologies and best practices.
+        </p>
+      </div>
       <div className="w-full mx-auto">
         <div className='w-full px-3 mask-r-from-70% mask-l-from-70% space-y-4'>
           {randomizedLists.map((list, index) => (
-            <ul key={index} className="flex   md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-marquee  ">
+            <ul key={index} className="flex  md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-marquee  space-y-5 ">
               {list.map((icon, iconIndex) => (
                 <li key={iconIndex} className="flex justify-center items-center ">
                   <img src={icon.src} alt={icon.alt} className="mr-2 size-12" />

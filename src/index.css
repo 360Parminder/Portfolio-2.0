@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
-
+/* --font-family: "Hepta Slab", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+ /* font-family: "Sono", monospace; */
 
 :root {
   --foreground: #ffffff;
@@ -45,7 +47,7 @@
     --color-success: var(--success);
     --color-warning: var(--warning);
     --color-info: var(--info);
-    --font-family: "Hepta Slab", serif;
+    --font-family: "Sono", monospace;
     --shadow-glass: 0 8px 32px 0 rgba(107, 70, 193, 0.15);
   --backdrop-blur-xs: 2px;
 
@@ -83,15 +85,10 @@
   }
   
 }
-/* body {
-  margin: 0;
-  font-family: "Hepta Slab", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ body {
   background-color: var(--background);
-  color: var(--foreground);
 }
-.logo {
+/*.logo {
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }

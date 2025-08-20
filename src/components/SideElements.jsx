@@ -53,7 +53,7 @@ const SideElements = () => {
       >
         <motion.a 
           href="mailto:360.parminder@gmail.com" 
-          className="text-md tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors"
+          className="text-md tracking-widest writing-mode-vertical hover:text-amber-200 transition-colors font-family"
             target="_blank" rel="noopener noreferrer"
             style={{ writingMode: 'vertical-rl' }}
         whileHover={{ y:-10,scale:1.1, transition: { duration: 0.4 } }}
