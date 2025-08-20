@@ -20,7 +20,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="flex whitespace-nowrap" style={{}}>
+          <div className="flex whitespace-nowrap mask-l-from-90% mask-r-from-90% " style={{}}>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide">
               <span
                 className=""
