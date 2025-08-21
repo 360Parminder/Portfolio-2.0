@@ -6,6 +6,26 @@ import Aura from '../assets/images/Aura.png';
 import Slug from '../assets/images/Slug.png';
 
 const projects = [
+  //  {
+  //   title: "Kosh",
+  //   description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
+  //   image: Rajdoot,
+  //   tech: [
+  //     { label: "React", icon: 'react' },
+  //     { label: "Tailwind", icon: 'tailwindcss' },
+  //     { label: "Node.js", icon: 'nodejs' },
+  //     { label: "MongoDB", icon: 'mongodb' },
+  //     { label: "Razorpay", icon: 'razorpay' },
+  //     { label: "AWS", icon: 'aws' },
+  //     { label: "Cloudinary", icon: 'cloudinary' },
+  //     // { label: "Arduino", icon: 'arduino' },
+  //     // { label: "MQTT", icon: 'mqtt' },
+  //     // { label: "Socket.io", icon: 'socket.io' }],
+  //   ],
+  //   link: "https://kosh.uno",
+  //   github: "https://github.com/360parminder/kosh"
+
+  // },
   {
     title: "Rajdoot",
     description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
