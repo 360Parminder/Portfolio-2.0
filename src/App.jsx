@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import SideElements from './components/SideElements';
 import MobileScreen from './components/MobileScreen';
 import { MoonIcon, SunIcon } from 'lucide-react';
+import { Analytics } from "@vercel/analytics/react"
 
 function useIsMobile() {
   const getIsMobile = () =>
@@ -45,6 +46,8 @@ function App() {
   }
 
   return (
+    <>
+      <Analytics />
     <div className="bg-background text-foreground font-sans relative">
       {/* <button className='fixed bottom-5 right-[5rem] z-100' onClick={handleThemeToggle}>
         {darkMode ? <SunIcon /> : <MoonIcon />}
@@ -64,6 +67,7 @@ function App() {
         <Contact />
       </div>
     </div>
+        </>
   );
 }
 
