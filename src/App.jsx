@@ -49,9 +49,9 @@ function App() {
     <>
       <Analytics />
     <div className="bg-background text-foreground font-sans relative">
-     <button className='fixed bottom-5 right-[5rem] z-100' onClick={handleThemeToggle}>
+     {/* <button className='fixed bottom-5 right-[5rem] z-100' onClick={handleThemeToggle}>
         {darkMode ? <SunIcon /> : <MoonIcon />}
-      </button>
+      </button> */}
       <SideElements />
       <div className="max-w-7xl mx-auto relative overflow-hidden px-4">
         {/* Page 1 - Header */}
