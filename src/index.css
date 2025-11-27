@@ -4,6 +4,7 @@
 /* --font-family: "Hepta Slab", serif; */
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
  /* font-family: "Sono", monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
 
 :root {
   --foreground: #ffffff;
@@ -31,6 +32,9 @@
     --success: #4caf50;
     --warning: #ff9800;
     --info: #2196f3;
+}
+@theme{
+    --font-science-gothic: 'Science Gothic', sans-serif;
 }
 
 @theme inline{

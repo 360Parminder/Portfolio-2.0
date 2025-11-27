@@ -5,7 +5,7 @@ import { FaGithub, FaHeart } from 'react-icons/fa';
 const Contact = () => {
  
   return (
-    <section className="relative pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b from-neutral-00 to-neutral-400 dark:to-neutral-900  z-40">
+    <section className="relative pt-4 w-full flex flex-col items-center justify-center px-8 bg-linear-to-b from-neutral-00 to-neutral-400 dark:to-neutral-900  z-40 pb-14">
     
       <div className="flex flex-col items-center justify-center grow w-full">
         <motion.div 
