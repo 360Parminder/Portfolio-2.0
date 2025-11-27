@@ -47,7 +47,7 @@ const Blogs = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="min-h-screen py-20 px-4 md:px-8 max-w-7xl mx-auto">
             <div className="mb-16 overflow-hidden bg-black dark:bg-white py-4 -mx-4 md:-mx-8 mask-l-from-90% mask-r-from-90% ">
                 <motion.div
                     className="flex whitespace-nowrap"
