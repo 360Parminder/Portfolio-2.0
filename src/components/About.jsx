@@ -50,7 +50,7 @@ const About = () => {
     <section id="about" className="relative min-h-screen w-full flex  flex-col items-center justify-between pt-14 pb-20 mb-28 font-family">
       <div className="flex flex-row space-x-40 justify-between">
         <p className="w-[40%] text-xl font-family leading-7.5">
-          I’m Parminder Singh, a developer who transforms ideas into interactive experiences by combining
+          Developer who transforms ideas into interactive experiences by combining
           <span className="inline-flex items-baseline mx-1 mb-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
             <img src="/icons/react.svg" alt="React" className="size-5 self-center mr-1" />
             React

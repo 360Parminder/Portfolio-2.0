@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
 import MobileScreen from './pages/MobileScreen';
+import WorkExperience from './pages/WorkExperience';
 
 
 
@@ -66,7 +67,7 @@ function App() {
 
                       <Route path="projects" element={<Projects />} />
                       <Route path="blogs" element={<Blogs />} />
-
+                      <Route path="work" element={<WorkExperience />} />
                   </Route>
              </Routes>
 

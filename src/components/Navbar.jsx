@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isNearBottom, setIsNearBottom] = useState(false);
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
+            if (!isHomePage) return; // Only calculate scroll on home page
+
             const scrollPosition = window.scrollY + window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             const scrollPercentage = (scrollPosition / documentHeight) * 100;
@@ -14,9 +18,17 @@ const Navbar = () => {
             setIsNearBottom(scrollPercentage > 85);
         };
 
+        // Reset state when changing pages
+        if (!isHomePage) {
+            setIsNearBottom(false);
+        }
+
         window.addEventListener('scroll', handleScroll);
+        // Trigger once on mount/change to set initial state correctly
+        handleScroll();
+
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isHomePage]);
 
     const navItems = [
         { name: 'Home', path: '/' },
@@ -32,11 +44,10 @@ const Navbar = () => {
                     <NavLink
                         key={item.name}
                         to={item.path}
-                        className={({ isActive }) => `relative text-sm font-medium transition-colors duration-300 group ${
-                            isNearBottom 
-                                ? 'text-white hover:text-white/80' 
-                                : 'text-zinc-800 dark:text-zinc-700 hover:text-black dark:hover:text-black'
-                        } ${isActive ? 'text-black dark:text-white' : ''}`}
+                        className={({ isActive }) => `relative text-sm font-medium transition-colors duration-300 group ${isNearBottom && isHomePage
+                                ? 'text-white hover:text-white/80'
+                                : 'text-zinc-800 dark:text-zinc-100 hover:text-black dark:hover:text-white'
+                            } ${isActive ? 'text-black dark:text-white' : ''}`}
                     >
                         {item.name}
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full opacity-50"></span>

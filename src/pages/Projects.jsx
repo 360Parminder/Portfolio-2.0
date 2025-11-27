@@ -8,7 +8,7 @@ import ProjectItem from '../components/ProjectItem';
 
 
 const projects = [
-   {
+  {
     title: "Kosh",
     description: "Kosh is an saas that helps you to track your subscription expenses and manage your finances. It also helps you to generate invoices and manage your clients.",
     image: Kosh,
@@ -89,7 +89,7 @@ const projects = [
     { label: "Tailwind", icon: 'tailwindcss' },
     { label: "MongoDB", icon: 'mongodb' },
     { label: "Motion", icon: 'motion' }
-  ],
+    ],
     link: "https://slug-url.vercel.app",
     github: "https://github.com/360Parminder/TheSlug"
   },
@@ -98,30 +98,30 @@ const projects = [
 const Projects = () => {
   return (
     <section className="min-h-screen max-w-7xl py-20 px-8 relative flex flex-col items-center justify-center mx-auto overflow-hidden">
-      <div className="mb-16 overflow-hidden bg-white py-4 -mx-4 md:-mx-8">
-                      <motion.div
-                          className="flex whitespace-nowrap"
-                          animate={{ x: ["0%", "-50%"] }}
-                          transition={{
-                              repeat: Infinity,
-                              ease: "linear",
-                              duration: 25,
-                          }}
-                      >
-                          {[...Array(2)].map((_, groupIndex) => (
-                              <div key={groupIndex} className="flex">
-                                  {[...Array(10)].map((_, i) => (
-                                      <span
-                                          key={i}
-                                          className="text-4xl md:text-6xl font-bold text-black px-6 font-science-gothic uppercase"
-                                      >
-                                          Our Projects
-                                      </span>
-                                  ))}
-                              </div>
-                          ))}
-                      </motion.div>
-                  </div>
+      <div className="mb-16 overflow-hidden bg-black dark:bg-white py-4 -mx-4 md:-mx-8 mask-l-from-90% mask-r-from-90% ">
+        <motion.div
+          className="flex whitespace-nowrap "
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 30,
+          }}
+        >
+          {[...Array(2)].map((_, groupIndex) => (
+            <div key={groupIndex} className="flex">
+              {[...Array(10)].map((_, i) => (
+                <span
+                  key={i}
+                  className="text-4xl md:text-6xl font-bold text-white dark:text-black px-6 font-science-gothic uppercase"
+                >
+                  Projects
+                </span>
+              ))}
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
       <div className="max-w-6xl flex flex-col items-center font-family">
         {projects.map((project, index) => (

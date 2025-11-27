@@ -48,7 +48,7 @@ const Blogs = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
-            <div className="mb-16 overflow-hidden bg-white py-4 -mx-4 md:-mx-8">
+            <div className="mb-16 overflow-hidden bg-black dark:bg-white py-4 -mx-4 md:-mx-8 mask-l-from-90% mask-r-from-90% ">
                 <motion.div
                     className="flex whitespace-nowrap"
                     animate={{ x: ["0%", "-50%"] }}
@@ -63,7 +63,7 @@ const Blogs = () => {
                             {[...Array(8)].map((_, i) => (
                                 <span
                                     key={i}
-                                    className="text-4xl md:text-6xl font-bold text-black px-6 font-science-gothic uppercase"
+                                    className="text-4xl md:text-6xl font-bold text-white dark:text-black px-6 font-science-gothic uppercase"
                                 >
                                     Our Blog
                                 </span>
