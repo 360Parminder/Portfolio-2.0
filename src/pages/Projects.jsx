@@ -105,12 +105,12 @@ const Projects = () => {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 30,
+            duration: 40,
           }}
         >
           {[...Array(2)].map((_, groupIndex) => (
             <div key={groupIndex} className="flex">
-              {[...Array(10)].map((_, i) => (
+              {[...Array(8)].map((_, i) => (
                 <span
                   key={i}
                   className="text-4xl md:text-6xl font-bold text-white dark:text-black px-6 font-science-gothic uppercase"
