@@ -38,7 +38,7 @@ const About = () => {
       }
       return newArray;
     };
-    
+
     return [
       shuffle([...techIcons]),
       shuffle([...techIcons]),
@@ -47,14 +47,40 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="relative min-h-screen w-full flex  flex-col items-center justify-between pt-14 pb-20 font-family">
+    <section id="about" className="relative min-h-screen w-full flex  flex-col items-center justify-between pt-14 pb-20 mb-28 font-family">
       <div className="flex flex-row space-x-40 justify-between">
-        <p className='w-[40%] text-xl font-family'>
-          Hello, World! I am Parminder Singh — a Web and APP Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
+        <p className="w-[40%] text-xl font-family leading-7.5">
+          Developer who transforms ideas into interactive experiences by combining
+          <span className="inline-flex items-baseline mx-1 mb-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
+            <img src="/icons/react.svg" alt="React" className="size-5 self-center mr-1" />
+            React
+          </span>
+          <span className="inline-flex items-baseline mx-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
+            <img src="/icons/react-navigation.svg" alt="React Native" className="size-5 self-center mr-1" />
+            React Native
+          </span>
+          ,and
+          <span className="inline-flex items-baseline mx-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
+            <img src="/icons/motion.svg" alt="Motion" className="size-5 self-center mr-1" />
+            Motion
+          </span>
+          animations with powerful
+          <span className="inline-flex items-baseline mx-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
+            <img src="/icons/mongodb.svg" alt="MongoDB" className="size-5 self-center mr-1" />
+            MongoDB
+          </span>
+          and
+          <span className="inline-flex items-baseline mx-1 mt-1 px-1 bg-neutral-300 dark:bg-neutral-800 rounded-md border-dashed border border-neutral-400 dark:border-neutral-600 shadow-inner shadow-neutral-400 dark:shadow-neutral-700/80">
+            <img src="/icons/postgresSQL.svg" alt="PostgreSQL" className="size-5 self-center mr-1" />
+            PostgreSQL
+          </span>
+          databases.
         </p>
-        <p className='w-[40%] text-xl font-family'>
-          I specialize in building responsive and accessible web applications using the latest technologies and best practices.
+
+        <p className="w-[40%] text-xl font-family leading-7.5">
+          With a focus on responsive design and smooth functionality, I build accessible applications that perform flawlessly across devices and platforms.
         </p>
+
       </div>
       <div className="w-full mx-auto">
         <div className='w-full px-3 mask-r-from-70% mask-l-from-70% space-y-4'>

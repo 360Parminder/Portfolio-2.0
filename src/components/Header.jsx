@@ -20,8 +20,8 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="flex whitespace-nowrap mask-l-from-90% mask-r-from-90% " style={{}}>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide">
+          <div className="flex whitespace-nowrap mask-l-from-90% mask-r-from-90% ">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide font-science-gothic">
               <span
                 className=""
                 style={{ color: 'transparent', WebkitTextStroke: `2px var(--foreground)` }}
@@ -30,7 +30,7 @@ const Header = () => {
               </span>
               DEVELOPER
             </h1>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider animate-slide font-science-gothic">
               <span
                 className=""
                 style={{ color: 'transparent', WebkitTextStroke: `2px var(--foreground)` }}
@@ -44,7 +44,7 @@ const Header = () => {
         </motion.div>
 
         <motion.h3
-          className="absolute top-[60%] text-xl md:text-3xl uppercase"
+          className="absolute top-[60%] text-xl md:text-3xl uppercase font-science-gothic"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -53,7 +53,7 @@ const Header = () => {
         </motion.h3>
 
         <motion.h3
-          className="absolute top-[60%] right-0 text-xl md:text-3xl uppercase"
+          className="absolute top-[60%] right-0 text-xl md:text-3xl uppercase font-science-gothic"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}

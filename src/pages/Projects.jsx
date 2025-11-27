@@ -1,31 +1,33 @@
 import { motion } from 'framer-motion';
-import ProjectItem from './ProjectItem';
 import Rajdoot from '../assets/images/Rajdoot.png';
 import Swasthya from '../assets/images/Swasthya.png';
 import Aura from '../assets/images/Aura.png';
 import Slug from '../assets/images/Slug.png';
+import Kosh from '../assets/images/Kosh.png';
+import ProjectItem from '../components/ProjectItem';
+
 
 const projects = [
-  //  {
-  //   title: "Kosh",
-  //   description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
-  //   image: Rajdoot,
-  //   tech: [
-  //     { label: "React", icon: 'react' },
-  //     { label: "Tailwind", icon: 'tailwindcss' },
-  //     { label: "Node.js", icon: 'nodejs' },
-  //     { label: "MongoDB", icon: 'mongodb' },
-  //     { label: "Razorpay", icon: 'razorpay' },
-  //     { label: "AWS", icon: 'aws' },
-  //     { label: "Cloudinary", icon: 'cloudinary' },
-  //     // { label: "Arduino", icon: 'arduino' },
-  //     // { label: "MQTT", icon: 'mqtt' },
-  //     // { label: "Socket.io", icon: 'socket.io' }],
-  //   ],
-  //   link: "https://kosh.uno",
-  //   github: "https://github.com/360parminder/kosh"
+  {
+    title: "Kosh",
+    description: "Kosh is an saas that helps you to track your subscription expenses and manage your finances. It also helps you to generate invoices and manage your clients.",
+    image: Kosh,
+    tech: [
+      { label: "React", icon: 'react' },
+      { label: "Tailwind", icon: 'tailwindcss' },
+      { label: "Node.js", icon: 'nodejs' },
+      { label: "MongoDB", icon: 'mongodb' },
+      { label: "Razorpay", icon: 'razorpay' },
+      { label: "AWS", icon: 'aws' },
+      { label: "Cloudinary", icon: 'cloudinary' },
+      { label: "Motion", icon: 'motion' },
+      // { label: "MQTT", icon: 'mqtt' },
+      // { label: "Socket.io", icon: 'socket.io' }],
+    ],
+    link: "https://kosh.uno",
+    github: "https://github.com/360parminder/kosh"
 
-  // },
+  },
   {
     title: "Rajdoot",
     description: "Sophisticated Messaging APIs for Developers. Build powerful messaging applications with our elegant, reliable, and affordable API platform.",
@@ -39,9 +41,9 @@ const projects = [
       { label: "AWS", icon: 'aws' },
       { label: "Cloudinary", icon: 'cloudinary' },
       { label: "Arduino", icon: 'arduino' },
-      // { label: "MQTT", icon: 'mqtt' },
+      { label: "Motion", icon: 'motion' },
       { label: "Socket.io", icon: 'socket.io' }],
-    link: "https://rajdoot.parminder.info",
+    link: "https://rajdoot.wtf",
     github: "https://github.com/360parminder/rajdoot"
 
   },
@@ -53,8 +55,8 @@ const projects = [
       { label: "React Native", icon: 'react' },
       { label: "Node.js", icon: 'nodejs' },
       { label: "Tailwind", icon: 'tailwindcss' },
+      { label: "Motion", icon: 'motion' },
       { label: "MongoDB", icon: 'mongodb' },
-      // { label: "Express", icon: 'express' },
       { label: "AWS", icon: 'aws' },
       { label: "Cloudinary", icon: 'cloudinary' },
       { label: "IOT", icon: 'arduino' },
@@ -71,7 +73,7 @@ const projects = [
     tech: [{ label: "React", icon: 'react' },
     { label: "Firebase", icon: 'firebase' },
     { label: "Tailwind", icon: 'tailwindcss' },
-    // { label: "Express", icon: 'express' },
+    { label: "Motion", icon: 'motion' },
     { label: "Node.js", icon: 'nodejs' },
     { label: "MongoDB", icon: 'mongodb' },
     { label: "Razorpay", icon: 'razorpay' }],
@@ -86,8 +88,8 @@ const projects = [
     { label: "Node.js", icon: 'nodejs' },
     { label: "Tailwind", icon: 'tailwindcss' },
     { label: "MongoDB", icon: 'mongodb' },
-    // { label: "Express", icon: 'express' }
-  ],
+    { label: "Motion", icon: 'motion' }
+    ],
     link: "https://slug-url.vercel.app",
     github: "https://github.com/360Parminder/TheSlug"
   },
@@ -95,33 +97,31 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="min-h-screen w-full py-20 px-8 relative z-50 ">
-      <motion.div
-        className="absolute inset-0 opacity-20"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: [0.1, 0.3, 0.1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: "reverse"
-        }}
-      >
-        {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/30 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-indigo-600/20 blur-3xl"></div> */}
-      </motion.div>
-
-      {/* <motion.h2 
-        className="text-3xl md:text-4xl mb-20 relative text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-cyan-400"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        Some Things I've Built
-        <span className="absolute top-1/2 left-88 w-64 h-0.5 bg-linear-to-r from-purple-500 to-cyan-400 hidden md:block"></span>
-      </motion.h2> */}
+    <section className="min-h-screen max-w-7xl py-20 px-8 relative flex flex-col items-center justify-center mx-auto overflow-hidden">
+      <div className="mb-16 overflow-hidden bg-black dark:bg-white py-4 -mx-4 md:-mx-8 mask-l-from-90% mask-r-from-90% ">
+        <motion.div
+          className="flex whitespace-nowrap "
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 30,
+          }}
+        >
+          {[...Array(2)].map((_, groupIndex) => (
+            <div key={groupIndex} className="flex">
+              {[...Array(10)].map((_, i) => (
+                <span
+                  key={i}
+                  className="text-4xl md:text-6xl font-bold text-white dark:text-black px-6 font-science-gothic uppercase"
+                >
+                  Projects
+                </span>
+              ))}
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
       <div className="max-w-6xl flex flex-col items-center font-family">
         {projects.map((project, index) => (
