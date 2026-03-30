@@ -80,13 +80,13 @@ const Blogs = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="group relative bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-neutral-500/10 flex flex-col md:flex-row h-full md:h-64"
+                        className="group relative bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-neutral-500/10 flex flex-col md:flex-row h-full md:h-64"
                     >
                         {/* Content Section (Left) */}
                         <div className="flex-1 p-6 md:p-8 flex flex-col justify-between order-2 md:order-1">
                             <div>
                                 <div className="flex items-center gap-3 mb-3">
-                                    <span className="text-xs font-semibold px-3 py-1 bg-white/10 text-white border border-white/20">
+                                    <span className="text-xs font-semibold px-3 py-1 bg-black/5 dark:bg-white/10 text-zinc-900 dark:text-white border border-black/10 dark:border-white/20">
                                         {blog.tags[0]}
                                     </span>
                                     <span className="text-xs text-muted-foreground flex items-center gap-1">
@@ -94,7 +94,7 @@ const Blogs = () => {
                                     </span>
                                 </div>
 
-                                <h2 className="text-2xl font-bold mb-3 group-hover:text-white/80 transition-colors">
+                                <h2 className="text-2xl font-bold mb-3 text-zinc-900 dark:text-white group-hover:text-zinc-700 dark:group-hover:text-white/80 transition-colors">
                                     {blog.title}
                                 </h2>
                                 
@@ -103,7 +103,7 @@ const Blogs = () => {
                                 </p>
                             </div>
 
-                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-black/10 dark:border-white/5">
                                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                                     <span className="flex items-center gap-1.5">
                                         <User className="w-4 h-4" />
@@ -115,7 +115,7 @@ const Blogs = () => {
                                     </span>
                                 </div>
                                 
-                                <button className="hidden md:flex items-center gap-1 text-sm font-medium text-white hover:text-white/70 transition-colors">
+                                <button className="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-white/70 transition-colors">
                                     Read <ArrowRight className="w-4 h-4" />
                                 </button>
                             </div>

@@ -6,9 +6,31 @@
  /* font-family: "Sono", monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
 
+@custom-variant dark (&:is(.dark *));
+
+*, ::before, ::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 700ms;
+  transition-timing-function: ease-in-out;
+}
+
 :root {
-  --foreground: #ffffff;
+  --background: #f9fafb;
+  --foreground: #0f172a;
+  --border: #e2e8f0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --highlight: #646cff;
+  --muted: #64748b;
+  --accent: #ff007f;
+  --error: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+}
+
+.dark {
   --background: #000000;
+  --foreground: #ffffff;
   --border: #444444;
   --shadow: rgba(0, 0, 0, 0.5);
   --highlight: #646cff;
@@ -18,20 +40,6 @@
   --success: #4caf50;
   --warning: #ff9800;
   --info: #2196f3;
-}
-
-.dark{
-    --background: #ffffff;
-    --foreground: #000000;
-    --border: #888888;
-    --shadow: rgba(255, 255, 255, 0.5);
-    --highlight: #646cff;
-    --muted: #888888;
-    --accent: #ff007f;
-    --error: #ff4d4f;
-    --success: #4caf50;
-    --warning: #ff9800;
-    --info: #2196f3;
 }
 @theme{
     --font-science-gothic: 'Science Gothic', sans-serif;
@@ -73,22 +81,7 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #000000;
-    --border: #1b1212;
-    --shadow: rgba(0, 0, 0, 0.5);
-    --highlight: #646cff;
-    --muted: #888888;
-    --accent: #ff007f;
-    --error: #ff4d4f;
-    --success: #4caf50;
-    --warning: #ff9800;
-    --info: #2196f3;
-  }
-  
-}
+
  body {
   background-color: var(--background);
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const [isNearBottom, setIsNearBottom] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
     const navItems = [
         { name: 'Home', path: '/' },
         { name: 'Projects', path: '/projects' },
-        { name: 'Blogs', path: '/blogs' },
+        // { name: 'Blogs', path: '/blogs' },
         { name: 'Work', path: '/work' },
     ];
 
@@ -45,14 +46,18 @@ const Navbar = () => {
                         key={item.name}
                         to={item.path}
                         className={({ isActive }) => `relative text-sm font-medium transition-colors duration-300 group ${isNearBottom && isHomePage
-                                ? 'text-white hover:text-white/80'
-                                : 'text-zinc-800 dark:text-zinc-100 hover:text-black dark:hover:text-white'
+                            ? 'text-white hover:text-white/80'
+                            : 'text-zinc-800 dark:text-zinc-100 hover:text-black dark:hover:text-white'
                             } ${isActive ? 'text-black dark:text-white' : ''}`}
                     >
                         {item.name}
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full opacity-50"></span>
                     </NavLink>
                 ))}
+
+                <div className="w-px h-5 bg-black/20 dark:bg-white/20"></div>
+
+                <ThemeToggle />
             </nav>
         </div>
     );

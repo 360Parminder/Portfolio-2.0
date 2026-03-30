@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import SideElements from "../components/SideElements";
+import CurrentTime from "../components/CurrentTime";
 
 const Landing = () => {
 
@@ -10,9 +11,7 @@ const Landing = () => {
 
             <div className="bg-background text-foreground font-sans relative">
                 <Navbar />
-                {/* <button className='fixed bottom-5 right-[5rem] z-100' onClick={handleThemeToggle}>
-        {darkMode ? <SunIcon /> : <MoonIcon />}
-      </button> */}
+                <CurrentTime />
                 <SideElements />
                 <Outlet />
             </div>

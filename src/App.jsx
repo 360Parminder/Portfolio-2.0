@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
 import MobileScreen from './pages/MobileScreen';
 import WorkExperience from './pages/WorkExperience';
+import ThemeToggle from './components/ThemeToggle';
 
 
 
@@ -54,7 +55,10 @@ function App() {
 
     if (isMobile) {
       return (
-        <MobileScreen />
+        <>
+          <ThemeToggle className="fixed top-5 right-5 z-[100]" />
+          <MobileScreen />
+        </>
       );
     }
 
