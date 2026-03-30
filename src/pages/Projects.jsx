@@ -22,7 +22,7 @@ const projects = [
       { label: "Cloudinary", icon: 'cloudinary' },
       { label: "Motion", icon: 'motion' },
       // { label: "MQTT", icon: 'mqtt' },
-      // { label: "Socket.io", icon: 'socket.io' }],
+      { label: "Socket.io", icon: 'socket.io' }
     ],
     link: "https://kosh.uno",
     // github: "https://github.com/360parminder/"
