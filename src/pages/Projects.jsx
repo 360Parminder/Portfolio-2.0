@@ -10,7 +10,7 @@ import ProjectItem from '../components/ProjectItem';
 const projects = [
   {
     title: "Kosh",
-    description: "Kosh is an saas that helps you to track your subscription expenses and manage your finances. It also helps you to generate invoices and manage your clients.",
+    description: "✨ The Future of Email. Say goodbye to cluttered inboxes with an effortless, chat-like interface. Combine the simplicity of instant messaging with the power of email, featuring AI-powered smart filtering, instant custom domains, and a unified cross-platform experience web, iOS, and Android.",
     image: Kosh,
     tech: [
       { label: "React", icon: 'react' },
@@ -25,7 +25,7 @@ const projects = [
       // { label: "Socket.io", icon: 'socket.io' }],
     ],
     link: "https://kosh.uno",
-    github: "https://github.com/360parminder/kosh"
+    // github: "https://github.com/360parminder/"
 
   },
   {
